@@ -2,8 +2,16 @@
 
 let studentSetDictionary = {'anthony': 25,'ryan': 15,'jaguar': 20,'elias': 11,'roy': 7,'bryan':10,'maral':25,'adrian':12, 'jarred': 11, 'ian':20, 'miguel': 10, 'daniel': 20, 'ivy': 13, 'felix':-10, 'anmol':10, 'ishawn':-10, 'nathan':7, 'mike': 8, 'andrew': 18, 'daphney': 25, 'harish': 6, 'nick': 20, 'kevin': -10, 'karanveer': 14};
 
-let vocalStudents = ['felix', 'kevin', 'ishawn', 'mike'];
+let vocalStudents = ['felix', 'kevin', 'ishawn'];
 let displayZone = document.getElementById("displayZone");
+let specialButton = document.getElementById("specialButton");
+
+//removes the vocal students from the picking list
+function removeVocalStudents(){
+	for (student in vocalStudents){
+		delete studentSetDictionary[vocalStudents[student]];
+	}
+}
 
 //randomizing, main controlling function
 function weightSearch(){	
@@ -72,6 +80,7 @@ function pickStudentButton(){
 }
 
 //fluff taken from https://codepen.io/nashvail/pen/wpGgXO for demo version
+//No UI is yet designed
 
 // Some random colors
 const colors = ["#3CC157", "#2AA7FF", "#1B9B9B", "#FCBC0F", "#F85F36"];
